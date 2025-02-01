@@ -1,6 +1,6 @@
 import DropDown from "./DropDown";
 
-const QuestionBox = () => {
+const SelectionPanel  = () => {
 
   const values = [
     {
@@ -16,7 +16,7 @@ const QuestionBox = () => {
       "data" :["C++", "Java", "Python", "JavaScript"]
     },
   ]
-  console.log(values[0].data)
+
   return (
     <div className="w-4/5 mx-auto h-screen flex flex-col items-center mt-40">
       <h1 className="text-5xl font-bold">Ready to Challenge Yourself?</h1>
@@ -27,9 +27,9 @@ const QuestionBox = () => {
             <DropDown title={item.title} data={item.data} key={index}/>
           ))
         }
-          <button>Submit</button>
       </div>
+      <button className="bg-green-500 px-12 py-2 rounded-lg mt-8 text-white shadow-xl cursor-pointer text-center">Submit</button>
     </div>
   );
 };
-export default QuestionBox;
+export default SelectionPanel ;
