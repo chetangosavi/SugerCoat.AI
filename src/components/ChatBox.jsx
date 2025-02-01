@@ -17,7 +17,7 @@ const ChatBox = () => {
     <div className="chatbox">
       <div className=" w-4/5 mx-auto mt-10">
         <h1 className="text-center mb-4 font-bold text-xl font-medium">
-          How can I help You?
+          Hi there! How can I help you today?
         </h1>
         <form onSubmit={handleOnSubmit} className="flex gap-4 justify-center">
           <input
