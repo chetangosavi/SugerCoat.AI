@@ -3,7 +3,6 @@ import { useState } from "react"
 // eslint-disable-next-line react/prop-types
 const DropDown = ({title,data})=>{
     const [input,setInput] = useState("")
-    console.log(input)
 
     function handleOnChange (e){
         setInput(e.target.value)
@@ -14,8 +13,8 @@ const DropDown = ({title,data})=>{
             <option value="" disabled>Select {title}</option>
             {
                 // eslint-disable-next-line react/prop-types
-                data.map((item,index)=>(
-                    <option key={index}>{item}</option>
+                data.map((item)=>(
+                    <option key={item}>{item}</option>
                 ))
             }
          </select>
