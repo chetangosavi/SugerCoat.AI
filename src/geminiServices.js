@@ -10,7 +10,8 @@ export const fetchGeminiResponse = async (prompt) => {
   return response;
 };
 
-export const generateRandomDSAQuestion = async ({ topic, difficulty, language }) => {
+export const generateRandomDSAQuestion = async (selectedValues) => {
+  const [topic,difficulty,language] = selectedValues;
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     
     // Construct prompt using multiple parameters
@@ -24,6 +25,8 @@ export const generateRandomDSAQuestion = async ({ topic, difficulty, language })
     
     Example Input/Output:
     - <Example case here>
+
+    Do no genrate answer for the question and each time generate different question of given "${difficulty}" and "${topic}"
     `;
   
     const result = await model.generateContent(prompt);
