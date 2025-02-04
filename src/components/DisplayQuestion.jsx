@@ -1,8 +1,9 @@
 const DisplayBox = () => {
-    return{
+    return(
         <div>
+            
         </div>
-    }
+    )
 }
 
 export default DisplayBox;
