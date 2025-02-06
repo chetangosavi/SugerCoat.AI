@@ -23,10 +23,16 @@ export const generateRandomDSAQuestion = async (selectedValues) => {
     Constraints:
     - <Constraints here>
     
-    Example Input/Output:
+    Example 1:
     - <Example case here>
 
-    Do no genrate answer for the question and each time generate different question of given "${difficulty}" and "${topic}"
+    Example 2:
+    - <Example case here>
+
+    Example 3:
+    - <Example case here>
+
+    Do not generate answer for the question and each time generate different question of given "${difficulty}" and "${topic}"
     `;
   
     const result = await model.generateContent(prompt);
