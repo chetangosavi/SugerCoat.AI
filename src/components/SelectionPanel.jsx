@@ -1,24 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {generateRandomDSAQuestion} from '../geminiServices.js'
+import selectionData from "../data/selectionData.js";
 import DropDown from "./DropDown";
 
 const SelectionPanel = () => {
-  const values = [
-    {
-      title: "Topic",
-      data: ["Arrays", "Linked List", "Stacks", "Queues", "Trees", "Graphs"],
-    },
-    {
-      title: "Difficulty",
-      data: ["Easy", "Medium", "Hard"],
-    },
-    {
-      title: "Languages",
-      data: ["C++", "Java", "Python", "JavaScript"],
-    },
-  ];
-
+  
   const [selectedValues, setSelectedValues] = useState(["","",""]);
   const navigate = useNavigate()
 
@@ -44,7 +31,7 @@ const SelectionPanel = () => {
       <h1 className="text-5xl font-bold">Ready to Challenge Yourself?</h1>
       <h3 className="mt-4">Select Topic Difficulty and Language</h3>
       <div className="flex gap-10 mt-4">
-        {values.map((item, index) => (
+        {selectionData.map((item, index) => (
           <DropDown
             title={item.title}
             data={item.data}
