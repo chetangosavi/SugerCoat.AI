@@ -8,12 +8,12 @@ const DisplayQuestion = ({question}) => {
         const constraintsParts = parts[1]?parts[1].split("Example")[0].trim():"";
 
         return (
-            <div>
+            <div className="p-10">
                 {
                     questionPart && (
                         <>
                         <h2>Question :</h2>
-                        <pre>{questionPart}</pre>
+                        <pre className="whitespace-pre-wrap break-words">{questionPart}</pre>
                         </>
                     )
                 }
@@ -21,7 +21,7 @@ const DisplayQuestion = ({question}) => {
                     constraintsParts && (
                         <>
                         <h2>Contraints:</h2>
-                        <pre>{constraintsParts}</pre>
+                        <pre className="whitespace-pre-wrap break-words">{constraintsParts}</pre>
                         </>
                     )
                 }
@@ -30,7 +30,7 @@ const DisplayQuestion = ({question}) => {
     }
 
     return(
-        <div>
+        <div className="w-full">
             {formateQuestion(question)}
         </div>
     )
